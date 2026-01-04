@@ -1,7 +1,7 @@
 terraform {
-  # The backend block MUST be inside the terraform block
+  # The backend block MUST be inside this terraform block
   backend "s3" {
-    bucket         = "my-unique-tf-bucket-2026" # <--- Check this matches your actual bucket
+    bucket         = "my-unique-tf-bucket-2026"  # <--- REPLACE THIS if your bucket name is different
     key            = "global/s3/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-locks"
